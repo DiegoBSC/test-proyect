@@ -3,12 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Hello World!"
-            }
-        }
-        stage('finish') {
-            steps {
-                echo "Bye!"
+                sh './mvnw clean compile'
             }
         }
     }
